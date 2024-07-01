@@ -12,9 +12,9 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.BDYes.KelasController">
    <children>
@@ -29,16 +29,6 @@
             </TableView>
          </content>
       </ScrollPane>
-      <ToolBar layoutX="-3.0" prefHeight="35.0" prefWidth="1287.0">
-         <items>
-            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="1274.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#routeToHome" text="Home" />
-                  <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
-               </children>
-            </HBox>
-         </items>
-      </ToolBar>
       <VBox fx:id="boxAdd" layoutX="165.0" layoutY="315.0" prefHeight="85.0" prefWidth="1071.0">
          <children>
             <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
@@ -70,11 +60,11 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="572.0" layoutY="45.0" prefHeight="45.0" prefWidth="138.0">
          <children>
-            <Button fx:id="routePararel" mnemonicParsing="false" onAction="#routeToKelasPararelMenu" style="-fx-background-color: lightblue; -fx-background-radius: 5;" text="Kelas Parallel">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="KELAS" textAlignment="CENTER" wrappingWidth="138.0">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
          </children>
       </HBox>
       <VBox layoutX="44.0" layoutY="115.0" prefHeight="200.0" prefWidth="1192.0">
@@ -137,5 +127,19 @@
             </VBox>
          </children>
       </VBox>
+      <ToolBar prefHeight="35.0" prefWidth="1287.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#routeToHome" text="Home">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </items>
+      </ToolBar>
+      <Button fx:id="routePararel" layoutX="598.0" layoutY="103.0" mnemonicParsing="false" onAction="#routeToKelasPararelMenu" style="-fx-background-color: lightblue; -fx-background-radius: 5;" text="Kelas Parallel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
