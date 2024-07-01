@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.BDYes.LogMengajarController">
+   <children>
+      <ScrollPane layoutX="44.0" layoutY="400.0" prefHeight="280.0" prefWidth="1192.0">
+         <content>
+            <TableView fx:id="tableView" prefHeight="269.0" prefWidth="1187.0">
+               <columns>
+                  <TableColumn fx:id="teach_log_id" prefWidth="123.0" text="teach_log_id" />
+                  <TableColumn fx:id="opened_id" minWidth="0.0" prefWidth="621.0" text="opened_id" />
+                  <TableColumn fx:id="teacher_id" prefWidth="438.0" text="teacher_id" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ToolBar layoutX="-3.0" prefHeight="35.0" prefWidth="1287.0">
+         <items>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="1274.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#routeToHome" text="Home" />
+                  <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="routeLogMengajar" mnemonicParsing="false" onAction="#routeToGuruMenu" text="Back" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <VBox layoutX="54.0" layoutY="86.0" prefHeight="122.0" prefWidth="1192.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="43.0" prefWidth="1192.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#editKelas" prefHeight="35.0" prefWidth="56.0" style="-fx-background-color: lightgreen; -fx-background-radius: 10;" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#deleteLogMengajarGuru" prefHeight="35.0" prefWidth="56.0" style="-fx-background-color: orangered; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="75.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="boxEdit" prefHeight="85.0" prefWidth="1071.0">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="371.0" text="Nama Kelas Dibuka : " />
+                              <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="370.0" text="Nama Guru" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox fx:id="opened_id_edit" prefHeight="25.0" prefWidth="220.0">
+                                 <HBox.margin>
+                                    <Insets right="150.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="teacher_id_edit" prefHeight="25.0" prefWidth="220.0">
+                                 <HBox.margin>
+                                    <Insets right="150.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <Button fx:id="save" mnemonicParsing="false" onAction="#updateLogMengajarGuru" prefHeight="25.0" prefWidth="58.0" text="Save">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox fx:id="boxAdd" layoutX="169.0" layoutY="303.0" prefHeight="99.0" prefWidth="1067.0">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="450.0" text="Nama Kelas Dibuka : " />
+                  <Label text="Nama Guru : " />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox fx:id="opened_id_input" prefHeight="25.0" prefWidth="250.0" />
+                  <ChoiceBox fx:id="teacher_id_input" prefHeight="25.0" prefWidth="250.0">
+                     <HBox.margin>
+                        <Insets left="200.0" right="300.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Button fx:id="submit" mnemonicParsing="false" onAction="#addLogMengajar" prefHeight="25.0" prefWidth="58.0" text="Add">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
