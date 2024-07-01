@@ -1,5 +1,8 @@
 package com.example.BDYes;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -24,8 +27,15 @@ public class JavaPostgreSQL {
             pstmt.setBoolean(2, class_status);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred");
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -44,8 +54,15 @@ public class JavaPostgreSQL {
             pstmt.setString(6, address);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("SQL exception occured");
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -59,8 +76,15 @@ public class JavaPostgreSQL {
             pstmt.executeUpdate();
             System.out.println("Insertion successful!");
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred");
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -74,8 +98,15 @@ public class JavaPostgreSQL {
             pstmt.executeUpdate();
             System.out.println("Insertion successful!");
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred");
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -92,8 +123,15 @@ public class JavaPostgreSQL {
             pstmt.setDate(4, started_at);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("SQL exception occured");
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -109,8 +147,15 @@ public class JavaPostgreSQL {
             pstmt.setString(3, service_theme);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred");
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -133,7 +178,15 @@ public class JavaPostgreSQL {
                 anaks.add(temp);
             }
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return anaks;
     }
@@ -156,7 +209,15 @@ public class JavaPostgreSQL {
 
             }
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return gurus;
     }
@@ -178,7 +239,15 @@ public class JavaPostgreSQL {
 
             }
         } catch (SQLException e) {
-            System.out.println("SQL exception occurred: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return kebaktians;
     }
@@ -199,7 +268,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return kelasS;
     }
@@ -219,7 +296,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return kelasPararelS;
     }
@@ -240,7 +325,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return tahuns;
     }
@@ -258,8 +351,15 @@ public class JavaPostgreSQL {
             pstmt.executeUpdate();
             System.out.println("Insertion successful!");
         } catch (SQLException e) {
-            System.out.println("SQL ERROR: " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -281,7 +381,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return kelasDibukas;
     }
@@ -296,8 +404,15 @@ public class JavaPostgreSQL {
             pstmt.executeUpdate();
             System.out.println("Insertion successful!");
         } catch (SQLException e) {
-            System.out.println("SQL ERROR: " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -318,7 +433,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return kelasDibukas;
     }
@@ -333,8 +456,15 @@ public class JavaPostgreSQL {
             pstmt.executeUpdate();
             System.out.println("Insertion successful!");
         } catch (SQLException e) {
-            System.out.println("SQL ERROR: " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -355,7 +485,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return logMengajars;
     }
@@ -372,8 +510,15 @@ public class JavaPostgreSQL {
             pstmt.executeUpdate();
             System.out.println("Insertion successful!");
         } catch (SQLException e) {
-            System.out.println("SQL ERROR: " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang inputnya tidak sesuai dengan data type yang diminta!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
 
@@ -395,7 +540,15 @@ public class JavaPostgreSQL {
             }
 
         } catch (SQLException e) {
-            System.out.println("SQL excemption occured: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Salah mengambil data pada kolom!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
         return logMengajars;
     }
@@ -512,8 +665,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deleteTahun(String year_period, boolean semester, int year_id){
@@ -544,8 +704,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deletePararel(String parallel_name, int class_id){
@@ -574,8 +741,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deleteKebaktian(Date date,String service_type,String service_theme, int sunday_service_id){
@@ -606,8 +780,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deleteKelasDibuka(int class_id, int parallel_id, int year_id, int opened_id){
@@ -638,8 +819,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deleteLogKebaktian(int sunday_service_id, int child_id, boolean status, int service_log_id){
@@ -669,8 +857,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deleteLogMengajarGuru(int opened_id, int teacher_id, int teach_log_id){
@@ -699,8 +894,15 @@ public class JavaPostgreSQL {
 
             System.out.println("Updated");
         } catch (SQLException e) {
-            System.out.println("error : " + e);
-            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error");
+            alert.setContentText("Ada data yang tipe datanya salah!");
+
+            // Menampilkan alert dan menunggu respon dari pengguna
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                }
+            });
         }
     }
     public static void deleteKelasAnak(int opened_id, int child_id, int child_class_id){
